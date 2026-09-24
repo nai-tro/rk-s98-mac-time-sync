@@ -20,7 +20,7 @@ install:
 	chmod +x $(BINDIR)/rk_s98_sync.py
 	./Scripts/create_app.sh "$(HOME)/Desktop/Sync Keyboard Time.app" "$(BINDIR)/rksync"
 	launchctl unload $(HOME)/Library/LaunchAgents/com.user.rks98timesync.plist 2>/dev/null || true
-	cp LaunchAgent/com.user.rks98timesync.plist $(HOME)/Library/LaunchAgents/
+	sed 's|__BIN_PATH__|$(BINDIR)/rksync|g' LaunchAgent/com.user.rks98timesync.plist > $(HOME)/Library/LaunchAgents/com.user.rks98timesync.plist
 	launchctl load $(HOME)/Library/LaunchAgents/com.user.rks98timesync.plist
 
 uninstall:

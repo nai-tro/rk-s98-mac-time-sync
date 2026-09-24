@@ -62,7 +62,7 @@ struct RkScreenTimePacket {
 Clone the repository and run the installer:
 
 ```bash
-git clone https://github.com/<your-username>/rk-s98-mac-time-sync.git
+git clone https://github.com/nai-tro/rk-s98-mac-time-sync.git
 cd rk-s98-mac-time-sync
 ./Scripts/install.sh
 ```

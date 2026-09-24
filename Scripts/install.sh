@@ -23,7 +23,7 @@ echo "[*] Creating Desktop one-click app..."
 
 echo "[*] Installing LaunchAgent..."
 launchctl unload "$PLIST_DEST" 2>/dev/null || true
-cp "$PLIST_SRC" "$PLIST_DEST"
+sed "s|__BIN_PATH__|$BIN_DIR/rksync|g" "$PLIST_SRC" > "$PLIST_DEST"
 launchctl load "$PLIST_DEST"
 
 echo ""

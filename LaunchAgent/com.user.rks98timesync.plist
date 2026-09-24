@@ -6,7 +6,7 @@
     <string>com.user.rks98timesync</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/macmini/.local/bin/rksync</string>
+        <string>__BIN_PATH__</string>
         <string>--daemon</string>
     </array>
     <key>RunAtLoad</key>
