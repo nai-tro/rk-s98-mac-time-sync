@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
 set -e
 
-APP_DEST="${1:-$HOME/Desktop/Sync Keyboard Time.app}"
+if [ -n "$1" ]; then
+    APP_DEST="$1"
+elif [ -w "/Applications" ]; then
+    APP_DEST="/Applications/Sync Keyboard Time.app"
+else
+    APP_DEST="$HOME/Applications/Sync Keyboard Time.app"
+fi
 BIN_PATH="${2:-$HOME/.local/bin/rksync}"
 
-echo "[*] Creating Desktop shortcut application: $APP_DEST"
-
+echo "[*] Creating macOS application at: $APP_DEST"
 TEMP_SCRIPT=$(mktemp /tmp/sync_app_XXXXXX.applescript)
 cat << EOF > "$TEMP_SCRIPT"
 try

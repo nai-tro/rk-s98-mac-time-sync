@@ -74,15 +74,15 @@ make install
 
 This will:
 1. Compile the native Swift binary `rksync` to `~/.local/bin/rksync`.
-2. Create a one-click Desktop app: `~/Desktop/Sync Keyboard Time.app`.
+2. Create a one-click app: **`Sync Keyboard Time.app`** in `/Applications` (or `~/Applications` if no admin rights).
 3. Install and load the background `launchd` LaunchAgent daemon.
 
 ---
 
 ## Usage
 
-### Option 1: One-Click Desktop App (Easiest)
-A shortcut called **`Sync Keyboard Time.app`** will be on your **Desktop**:
+### Option 1: One-Click App (Easiest)
+**`Sync Keyboard Time.app`** will be in your **Applications** folder (launch via Spotlight: `Cmd+Space` → `Sync`):
 1. Make sure your keyboard switch is set to **`2.4G`** (with the USB dongle plugged in) or connected via **USB cable**.
 2. Double-click **`Sync Keyboard Time.app`**.
 3. A macOS notification banner confirms the time is updated.
@@ -118,7 +118,7 @@ Because Bluetooth Low Energy cannot receive clock calibration packets:
 1. Use **Bluetooth (`BT`)** for everyday typing.
 2. **Once every few weeks** (or if the keyboard battery dies):
    * Flip the physical switch to **`2.4G`** (with the dongle plugged in) or plug in the USB cable.
-   * Double-click **`Sync Keyboard Time.app`** on your Desktop.
+   * Open **`Sync Keyboard Time.app`** from Applications (or Spotlight `Cmd+Space` → `Sync`).
    * The clock calibrates in **0.07 seconds**.
    * Flip back to **`BT`**.
 
