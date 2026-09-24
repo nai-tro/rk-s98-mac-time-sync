@@ -4,8 +4,8 @@ BINDIR ?= $(PREFIX)/bin
 .PHONY: all build install uninstall clean test
 
 all: build
-
 build:
+	mkdir -p bin
 	swiftc -O Sources/rksync.swift -o bin/rksync
 
 test:
