@@ -35,6 +35,7 @@ func getLocalTimePayload() -> [UInt8] {
 
 /// Discovers connected RK / SinoWealth keyboards and transmits the synchronization packet.
 func syncKeyboard() -> Bool {
+    let manager = IOHIDManagerCreate(kCFAllocatorDefault, IOOptionBits(kIOHIDOptionsTypeNone))
     let matchDicts: [[String: Any]] = [
         [kIOHIDVendorIDKey: 0x258A],
         [kIOHIDVendorIDKey: 0x0C45],
