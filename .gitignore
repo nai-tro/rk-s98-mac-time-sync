@@ -1,0 +1,8 @@
+bin/
+*.o
+*.dSYM/
+.DS_Store
+*.log
+*.err
+__pycache__/
+*.pyc
